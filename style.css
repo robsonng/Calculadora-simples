@@ -1,0 +1,326 @@
+body,html{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+ 
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows:7vh 8vh 10vh 75vh;
+  display:grid;
+  grid-template-areas:
+  "titulo titulo"
+  "campo campo"
+  "camposec camposec"
+  "calculadora comandos"
+  ;
+  background-image: linear-gradient(#5047FF 1%, #AC47FF ,white 50%);
+}
+
+.calculadora{
+  display:grid;
+  grid-area: calculadora;
+  grid-template-areas:
+  "sete oito nove"
+  "quatro cinco seis"
+  "um dois tres"
+  "zero virgula igual"
+  ;
+ background-color: #282628;
+  border-radius: 60% 0 0;
+  z-index: 4;
+ 
+}
+
+.comandos{
+  display:grid;
+  grid-area: comandos;
+  grid-template-rows:13vh 13vh 14vh 16vh 19vh;
+  grid-template-areas:
+  "limpar"
+  "multiplicacao"
+  "divisao"
+  "soma"
+  "subtracao"
+  ;
+  background-color: #282628;
+  border-radius: 0 60% 0 0;
+ z-index: 4;
+}
+
+.comandosteladeitada{
+  display:none;
+  grid-area: comandosteladeitada;
+   background-color: #282628;
+  grid-template-areas:
+  "INV RAD porc"
+  "sin cos tang"
+  "in log raiz"
+  "pi ume chapeu"
+  "pareaberto parefechado esclama"
+  ;
+  
+}
+
+.titulo{
+  grid-area: titulo;
+  border-color: transparent;
+ 
+}
+
+.menu{
+  display:none;
+  position:absolute;
+  width:50px;
+  height:8vh;
+  background-color: transparent;
+  border:none;
+}
+.submenu{
+  position:absolute;
+  background-color: #2D2B2D;
+  top:8vh;
+  width:45vw;
+  height:92vh;
+  left:-110vh;
+  transition:0.5s;
+  box-shadow: 6px 0px 6px #1E1D1E;
+  
+}
+.escolha{
+  display:block;
+  width:95% ;
+  height:10% ;
+  
+}
+
+.item{
+  font-size: 20pt;
+  border: none;
+  background-color: #282628;
+  color:#5494FF;
+  font-weight: bold;
+}
+
+.item:active{
+
+ text-shadow:0px 0px 1.30em #A9CCFF;
+ box-shadow:inset 0px 0px 5px #A9CCFF;
+ background-color:#1F2D31;
+  
+}
+
+
+.funcional{
+  color:white;
+  background-color: #2D2B2D;
+}
+
+.funcionlc{
+  color:#676970;
+  background-color: #2D2B2D;
+  font-weight: normal;
+  
+}
+
+#logomenu{
+  width: 75%;
+  height: 75%;
+  opacity:0.8;
+}
+use{
+  filter: invert(100%) sepia(4%) saturate(4748%) hue-rotate(227deg) brightness(113%) contrast(101%);
+}
+
+
+.INV{
+  grid-area: INV;
+  border-radius:60% 0 0 0;
+}
+
+.RAD{
+  grid-area: RAD;
+}
+
+.porc{
+  grid-area: porc;
+}
+
+.sin {
+  grid-area: sin;
+}
+
+.cos {
+  grid-area: cos;
+}
+
+.tan {
+  grid-area: tang;
+}
+
+.In {
+  grid-area: in;
+}
+
+.log {
+  grid-area: log;
+}
+
+.raiz {
+  grid-area: raiz;
+}
+
+.pi {
+  grid-area: pi;
+}
+
+.ume {
+  grid-area: ume;
+}
+
+.chapeu {
+  grid-area: chapeu;
+}
+
+.pareaberto {
+  grid-area: pareaberto;
+}
+
+.parefechado{
+  grid-area: parefechado;
+}
+
+.esclama{
+  grid-area: esclama;
+}
+
+.sete{
+  grid-area: sete;
+   border-radius: 48% 0 0;
+}
+.oito{
+  grid-area: oito;
+}
+.nove {
+  grid-area: nove;
+}
+.seis {
+  grid-area: seis;
+}
+.cinco {
+  grid-area: cinco;
+}
+.quatro {
+  grid-area: quatro;
+}
+.tres {
+  grid-area: tres;
+}
+.dois {
+  grid-area: dois;
+}
+.um {
+  grid-area: um;
+}
+.multiplicacao {
+  grid-area: multiplicacao;
+}
+.divisao {
+  grid-area: divisao;
+}
+.soma{
+  grid-area: soma;
+}
+.subtracao {
+  grid-area: subtracao;
+}
+
+.virgula {
+  grid-area: virgula;
+  background-color: #282628;
+}
+
+.zero{
+  grid-area: zero;
+}
+.igual{
+  grid-area: igual;
+  color:#B04EFF;
+  font-size:25pt;
+  background-color: #2D2B2D;
+   border-radius: 70% 0 0 60%;
+}
+
+.limpar{
+  display:block;
+  color:#B04EFF;
+  grid-area: limpar;
+  border-radius: 70% 70% 0 0;
+}
+.apagar{
+  display:none;
+  color:#B04EFF;
+  grid-area: limpar;
+  border-radius: 60% 70% 0 0;
+}
+
+
+.campo {
+  grid-area: campo;
+  background-color:transparent;
+  border-color: transparent;
+  color:white;
+  text-align: right;
+  font-size: 40pt;
+  width:95%;
+  z-index: 4;
+ 
+}
+
+#camposec {
+  grid-area: camposec;
+  background-color:transparent;
+  border-color: transparent;
+  color:white;
+  text-align: right;
+  font-size: 30pt;
+  color:#968E96;
+  width:95%;
+  
+}
+#tela{
+  position:absolute;
+  opacity: 0.5;
+  mix-blend-mode:soft-light;
+  width: 100%;
+  z-index: 3;
+}
+
+
+/*@media only screen and (min-width:600px){
+  
+  .comandosteladeitada{
+    display:grid;
+   
+  }
+  
+  .container{
+    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-areas:
+  "titulo titulo titulo"
+  "campo campo campo"
+  "calculadora comandosteladeitada comandos"
+  }
+  
+  .limpar{
+    border-radius: 0 60% 0 0;
+  }
+  
+  .igual{
+    border-radius: 60% 0 0 0;
+  }
+ 
+}*/
